@@ -8,6 +8,7 @@ RUN apk add --no-cache mariadb mariadb-client mariadb-server-utils pwgen tzdata 
 ENV  TZ=America/Los_Angeles
 
 ADD install.sh /scripts/install.sh
+ADD world.sql  /scripts/world.sql
 RUN mkdir /docker-entrypoint-initdb.d && \
     mkdir /scripts/pre-exec.d && \
     mkdir /scripts/pre-init.d && \
