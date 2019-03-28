@@ -16,6 +16,14 @@ docker-compose  build
 
 docker-compose up -d
 
+docker exec -it docker-phpfpm /bin/sh 
+
+apk  update
+
+apk  add mysql-client
+
+mysql -hdocker-mariadb -uroot -p
+
 
 
 
